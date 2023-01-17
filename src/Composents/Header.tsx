@@ -64,8 +64,8 @@ export default function Header(props: HeadBandProps) {
   );
 
   return (
-    <Box sx={{ display: 'flex' }} className='BackGround'>
-      <AppBar component="nav" className='BackGround'>
+    <Box sx={{ display: 'flex' }} className='Composant'>
+      <AppBar component="nav" className='BackGround Composant'>
         <Toolbar>
           <Box>
             <img src={image}className='logo' />

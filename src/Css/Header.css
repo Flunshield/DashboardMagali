@@ -17,3 +17,8 @@
 .BackGround {
     background-color: beige !important;
 }
+
+.Composant {
+    width: auto;
+    height: 100px;
+}

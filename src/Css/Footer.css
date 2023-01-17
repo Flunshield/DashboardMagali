@@ -1,0 +1,17 @@
+.beige-background {
+    background-color: beige;
+    height: 50px;
+  }
+  
+  .fixed-bottom {
+    position: relative;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+  }
+
+  .pFooter {
+    display: grid;
+    place-items: center;
+    bottom: 0;
+  }
