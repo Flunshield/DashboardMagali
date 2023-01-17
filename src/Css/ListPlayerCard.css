@@ -1,0 +1,22 @@
+.All {
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.GridListPlayerCard {
+    display: flex;
+}
+
+.btnListPlayerCard {
+    height: 50px;
+    max-width: 40%;
+    left: 10px;
+    top: 45px;
+    align-items: center;
+}
+
+.btnListPlayerCardGroup {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,19 @@
+.logo {
+    width: 25%;
+    height: auto;
+}
+.list {
+    display: flex;
+}
+
+.HeadBand {
+    margin-bottom: 100px;
+}
+
+.Btn {
+    color: black !important;
+}
+
+.BackGround {
+    background-color: beige !important;
+}
