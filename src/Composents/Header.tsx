@@ -4,8 +4,8 @@ import React from 'react';
 import '../Css/Header.css';
 import { Link as RouterLink } from 'react-router-dom';
 import image from '../logo_Magali.png';
-import ButtonLog from './ButtonLog';
 import { useKeycloak } from '@react-keycloak/web';
+import BouttonLog from './BouttonLog';
 
 interface HeadBandProps {
   window?: () => Window;
@@ -63,7 +63,7 @@ export default function Header(props: HeadBandProps) {
               </ListItem>
             )
         )}
-        <ButtonLog />
+        <BouttonLog />
       </List>
     </Box>
   );
@@ -73,7 +73,7 @@ export default function Header(props: HeadBandProps) {
       <AppBar component="nav" className='BackGround Composant'>
         <Toolbar>
           <Box>
-            <img src={image}className='logo' />
+            <img src={image} alt="logo" className='logo' />
           </Box>
           <Box>
             <Typography

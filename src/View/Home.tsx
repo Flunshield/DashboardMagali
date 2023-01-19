@@ -8,11 +8,7 @@ export default function Home() {
       <header>
         <HeadBand />
       </header>
-      <body>
-        <div>
-          
-       </div>
-      </body>
+
       <footer>
         <Footer />
       </footer>

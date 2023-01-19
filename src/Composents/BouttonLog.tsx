@@ -1,14 +1,15 @@
 import Button from '@mui/material/Button/Button';
 import { useKeycloak } from '@react-keycloak/web';
+import '../Css/Button.css';
 
-const ButtonLog = () => {
+const BouttonLog = () => {
   const { keycloak } = useKeycloak();
 
   const isLoggedIn = keycloak.authenticated;
   return isLoggedIn ? (
     <Button
-      variant="contained"
-      color="secondary"
+    variant="contained"
+    className='btnHeader'
       onClick={() => keycloak.logout()}
     >
       Logout
@@ -16,12 +17,12 @@ const ButtonLog = () => {
   ) : (
     <Button
       variant="contained"
+      className='btnHeader'
       onClick={() => keycloak.login()}
-      color="secondary"
     >
       Login
     </Button>
   );
 };
 
-export default ButtonLog;
+export default BouttonLog;
