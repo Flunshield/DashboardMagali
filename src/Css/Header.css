@@ -20,5 +20,9 @@
 
 .Composant {
     width: auto;
-    height: 100px;
+    height: 150px;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
 }

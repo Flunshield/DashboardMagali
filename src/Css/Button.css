@@ -2,3 +2,10 @@
     background-color: rgb(240, 240, 203) !important;
     color:black !important;
 }
+
+.btnWarning {
+    background-color: rgb(240, 240, 203) !important;
+    color:black !important;
+    margin-bottom: 50%;
+    margin-left: 47.6% !important;
+}

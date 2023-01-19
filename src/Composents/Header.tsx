@@ -20,22 +20,17 @@ type NavRoute = {
 export default function Header(props: HeadBandProps) {
 
   const { keycloak } = useKeycloak();
-  console.log(keycloak.authServerUrl)
+  const isLoggin = keycloak.authenticated
   const navItems: NavRoute[] = [
-    {
-      route: '/',
-      label: 'Accueil',
-      displayLink: true,
-    },
     {
       route: '/newConsultation',
       label: 'Nouvelle Consultation',
-      displayLink: true,
+      displayLink: isLoggin ?? false,
     },
     {
       route: '/Follow-up-consultation',
       label: 'Consultation de suivi',
-      displayLink: true,
+      displayLink: isLoggin ?? false,
     },
   ];
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -63,7 +58,7 @@ export default function Header(props: HeadBandProps) {
               </ListItem>
             )
         )}
-        <BouttonLog />
+        {isLoggin && <BouttonLog />}
       </List>
     </Box>
   );
