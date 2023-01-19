@@ -9,52 +9,9 @@ export default function Home() {
         <HeadBand />
       </header>
       <body>
-        <p>coucoufsxse</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
-        <p>coucou</p>
+        <div>
+          
+       </div>
       </body>
       <footer>
         <Footer />

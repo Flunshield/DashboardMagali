@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './View/ErrorPage';
 import Home from './View/Home';
 import { ROOT_HOME, ROOT_NEW_CONSULTATION } from './Constant/Constant';
+import { ReactKeycloakProvider } from '@react-keycloak/web';
+import keycloak from './Composents/keycloak';
 
 
 const router = createBrowserRouter([
@@ -25,9 +27,11 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
+  <ReactKeycloakProvider authClient={keycloak}>
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
+  </ReactKeycloakProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

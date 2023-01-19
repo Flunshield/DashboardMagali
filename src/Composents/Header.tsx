@@ -4,6 +4,8 @@ import React from 'react';
 import '../Css/Header.css';
 import { Link as RouterLink } from 'react-router-dom';
 import image from '../logo_Magali.png';
+import ButtonLog from './ButtonLog';
+import { useKeycloak } from '@react-keycloak/web';
 
 interface HeadBandProps {
   window?: () => Window;
@@ -17,6 +19,8 @@ type NavRoute = {
 
 export default function Header(props: HeadBandProps) {
 
+  const { keycloak } = useKeycloak();
+  console.log(keycloak.authServerUrl)
   const navItems: NavRoute[] = [
     {
       route: '/',
@@ -59,6 +63,7 @@ export default function Header(props: HeadBandProps) {
               </ListItem>
             )
         )}
+        <ButtonLog />
       </List>
     </Box>
   );
@@ -79,6 +84,7 @@ export default function Header(props: HeadBandProps) {
             >
               {drawer}
             </Typography>
+            
           </Box>
         </Toolbar>
       </AppBar>
