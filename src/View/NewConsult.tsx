@@ -1,8 +1,10 @@
 
-import AddCustomer from '../Composents/AddCustomer';
+import { Box } from '@mui/material';
+import AddPatient from '../Composents/AddPatient';
 import Footer from '../Composents/Footer';
 import HeadBand from '../Composents/Header';
 import '../Css/NewConsultPage.css';
+import '../Css/General.css';
 
 export default function NewConsul() {
 
@@ -11,9 +13,9 @@ export default function NewConsul() {
       <header>
         <HeadBand />
       </header>
-      <body>
-        <AddCustomer />
-      </body>
+      <Box>
+        <AddPatient />
+      </Box>
       <footer>
         <Footer />
       </footer>

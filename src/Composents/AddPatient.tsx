@@ -1,32 +1,32 @@
-import { AddCustomerInterface } from "../Interfaces/AddCustomerInterface"
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import { Box, Button, Card, TextField } from "@mui/material";
-import '../Css/AddCustomer.css';
-import { useState } from "react";
+import '../Css/AddPatient.css';
+import { AddPatientInterface } from "../Interfaces/AddPatientInterface";
 
-const initialValues: AddCustomerInterface = {
+const initialValues: AddPatientInterface = {
     firstName: "",
     lastName: "",
     email: "",
     age: "",
-    weight: ""
+    weight: "",
+    patientNumber: undefined
 }
 
-export default function AddCustomer() {
-    const onSubmit = (values: AddCustomerInterface) => {
+export default function AddPatient() {
+    const onSubmit = (values: AddPatientInterface) => {
         // Il faudra faire le lien vers le back ici
     }
-    
-    const validate = (values: AddCustomerInterface) => {
-        const errors: Partial<AddCustomerInterface> = {};
+
+    const validate = (values: AddPatientInterface) => {
+        const errors: Partial<AddPatientInterface> = {};
         if (!values.firstName) {
             errors.firstName = "Required";
         }
-    
+
         if (!values.lastName) {
             errors.lastName = "Required";
         }
-    
+
         if (!values.email) {
             errors.email = "Required";
         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
@@ -37,7 +37,7 @@ export default function AddCustomer() {
 
     return (
         <Box className="BoxForm">
-            <h2 className="">Fiche d'inscription</h2>
+            <h2 className="labelForm">Fiche d'inscription</h2>
             <Card className="FormCard">
                 <Formik
                     initialValues={initialValues}
@@ -46,7 +46,7 @@ export default function AddCustomer() {
                 >
                     <Form className="Form">
                         <Box className="BoxFormUnitaire">
-                        <Field as={TextField} id="firstName" label="Prénom" variant="filled" type="text" name="firstName"/>
+                            <Field as={TextField} id="firstName" label="Prénom" variant="filled" type="text" name="firstName" />
                             <ErrorMessage name="firstName" component="div" />
                         </Box>
                         <Box className="BoxFormUnitaire">
@@ -54,7 +54,7 @@ export default function AddCustomer() {
                             <ErrorMessage name="lastName" component="div" />
                         </Box>
                         <Box className="BoxFormUnitaire">
-                            <Field as={TextField} id="email" label="Outlemailined" variant="filled" type="email" name="email" />
+                            <Field as={TextField} id="email" label="Mail" variant="filled" type="email" name="email" />
                             <ErrorMessage name="email" component="div" />
                         </Box>
                         <Box className="BoxFormUnitaire">
@@ -64,6 +64,10 @@ export default function AddCustomer() {
                         <Box className="BoxFormUnitaire">
                             <Field as={TextField} id="weight" label="Poids" variant="filled" type="float" name="weight" />
                             <ErrorMessage name="weight" component="div" />
+                        </Box>
+                        <Box className="BoxFormUnitaire">
+                            <Field as={TextField} id="numberPatient" label="Numéro du patient" variant="filled" type="number" name="numberPatient" />
+                            <ErrorMessage name="numberPatient" component="div" />
                         </Box>
                         <Button variant="contained" type="submit" className="ButtonForm">
                             <b>Envoyer</b>

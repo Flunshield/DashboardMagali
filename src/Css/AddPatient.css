@@ -1,0 +1,38 @@
+
+.BoxForm {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FormCard {
+    width: 300px;
+    background-color: #18534F !important;
+    border-radius: 30px 90px 30px 90px !important;
+}
+
+.Form {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.BoxFormUnitaire {
+    display: block;
+    margin-bottom: 10px;
+    background-color: #ECF8F6;
+    border-radius: 10px;
+}
+
+.ButtonForm {
+    background-color: #D6955B !important;
+    color: black !important;
+}
+
+.labelForm {
+    font-size: 1.5em;
+    text-align: center;
+}

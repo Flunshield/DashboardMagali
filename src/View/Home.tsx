@@ -1,10 +1,12 @@
+import { Box } from '@mui/material';
 import { useKeycloak } from '@react-keycloak/web';
 import { useEffect, useState } from 'react';
-import AccueilCustomer from '../Composents/AccueilCustomer';
+import AccueilPatient from '../Composents/AccueilPatient';
 import BouttonLog from '../Composents/BouttonLog';
 import Footer from '../Composents/Footer';
 import HeadBand from '../Composents/Header';
 import LogoAcceuil from '../Composents/LogoAcceuil';
+import '../Css/General.css';
 import '../Css/Home.css';
 import '../Css/Loader.css';
 
@@ -29,12 +31,12 @@ export default function Home() {
       <header>
         <HeadBand />
       </header>
-      <body>
+      <Box>
         {loading ? 
           isLoggin ?
             <>
               <LogoAcceuil />
-              <AccueilCustomer />
+              <AccueilPatient />
             </>
             :
             <>
@@ -45,7 +47,7 @@ export default function Home() {
         <>
         <div className='loader'></div>
         </>}
-      </body>
+      </Box>
       <footer>
         <Footer />
       </footer>

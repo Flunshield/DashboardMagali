@@ -1,6 +1,7 @@
 import { Box, Button, Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import { useNavigate } from 'react-router-dom';
+import '../Css/General.css';
 
 export default function Error() {
     const navigate = useNavigate();
