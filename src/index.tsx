@@ -8,6 +8,7 @@ import Home from './View/Home';
 import { ROOT_HOME, ROOT_NEW_CONSULTATION } from './Constant/Constant';
 import { ReactKeycloakProvider } from '@react-keycloak/web';
 import keycloak from './Composents/keycloak';
+import NewConsul from './View/NewConsult';
 
 
 const router = createBrowserRouter([
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: ROOT_NEW_CONSULTATION,
-    element: "<NewConsul />",
+    element: <NewConsul />,
     errorElement: <ErrorPage />,
   },
 ]);

@@ -3,4 +3,4 @@
 
 // ROUTE PAGE URL
 export const ROOT_HOME = `/`
-export const ROOT_NEW_CONSULTATION = `NouvelleConsultation`
+export const ROOT_NEW_CONSULTATION = `NewConsultation`

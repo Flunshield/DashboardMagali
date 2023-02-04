@@ -10,7 +10,7 @@ const BouttonLog = () => {
     <Button
     variant="contained"
     className='btnHeader'
-      onClick={() => keycloak.logout()}
+      onClick={async () => await keycloak.logout()}
     >
       Logout
     </Button>
@@ -18,7 +18,7 @@ const BouttonLog = () => {
     <Button
       variant="contained"
       className='btnWarning'
-      onClick={() => keycloak.login()}
+      onClick={async () => await keycloak.login()}
     >
       Login
     </Button>

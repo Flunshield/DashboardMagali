@@ -23,7 +23,7 @@ export default function Header(props: HeadBandProps) {
   const isLoggin = keycloak.authenticated
   const navItems: NavRoute[] = [
     {
-      route: '/newConsultation',
+      route: '/NewConsultation',
       label: 'Nouvelle Consultation',
       displayLink: isLoggin ?? false,
     },
@@ -68,7 +68,9 @@ export default function Header(props: HeadBandProps) {
       <AppBar component="nav" className='BackGround Composant'>
         <Toolbar>
           <Box>
-            <img src={image} alt="logo" className='logo' />
+           <a href='/'>
+            <img src={image} alt="logo" className='logo'/>
+           </a>
           </Box>
           <Box>
             <Typography
