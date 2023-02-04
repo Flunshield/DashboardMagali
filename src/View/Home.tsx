@@ -6,7 +6,7 @@ import Footer from '../Composents/Footer';
 import HeadBand from '../Composents/Header';
 import LogoAcceuil from '../Composents/LogoAcceuil';
 import '../Css/Home.css';
-import '../Css/Loader.css'
+import '../Css/Loader.css';
 
 export default function Home() {
 

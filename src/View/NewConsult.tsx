@@ -1,7 +1,8 @@
 
+import AddCustomer from '../Composents/AddCustomer';
 import Footer from '../Composents/Footer';
 import HeadBand from '../Composents/Header';
-import '../Css/Home.css';
+import '../Css/NewConsultPage.css';
 
 export default function NewConsul() {
 
@@ -11,7 +12,7 @@ export default function NewConsul() {
         <HeadBand />
       </header>
       <body>
-
+        <AddCustomer />
       </body>
       <footer>
         <Footer />
