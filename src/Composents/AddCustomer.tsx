@@ -12,12 +12,11 @@ const initialValues: AddCustomerInterface = {
 }
 
 const onSubmit = (values: AddCustomerInterface) => {
-    console.log(values);
+    return console.log(values);
 }
 
 const validate = (values: AddCustomerInterface) => {
     const errors: Partial<AddCustomerInterface> = {};
-
     if (!values.firstName) {
         errors.firstName = "Required";
     }
@@ -32,20 +31,8 @@ const validate = (values: AddCustomerInterface) => {
         errors.email = "Invalid email address";
     }
 
-    if (!values.age) {
-        errors.age = "Required";
-    } else if (Number(values.age) < 0 || Number(values.age) < 99) {
-        errors.age = "Invalid age"
-    }
-
-    if (!values.weight) {
-        errors.weight = "Required";
-    } else if (Number(values.age) < 0 || Number(values.age) < 99) {
-        errors.age = "Invalid age"
-    }
-
-}
-
+    return errors;
+};
 export default function AddCustomer() {
     return (
         <Box className="BoxForm">
@@ -58,23 +45,23 @@ export default function AddCustomer() {
                 >
                     <Form className="Form">
                         <Box className="BoxFormUnitaire">
-                            <TextField id="outlined-basic" label="Prénom" variant="filled" type="text" name="firstName" />
+                            <TextField id="firstName" label="Prénom" variant="filled" type="text" name="firstName" />
                             <ErrorMessage name="firstName" component="div" />
                         </Box>
                         <Box className="BoxFormUnitaire">
-                            <TextField id="outlined-basic" label="Nom" variant="filled" type="text" name="lastName" />
+                            <TextField id="lastName" label="Nom" variant="filled" type="text" name="lastName" />
                             <ErrorMessage name="lastName" component="div" />
                         </Box>
                         <Box className="BoxFormUnitaire">
-                            <TextField id="outlined-basic" label="Outlemailined" variant="filled" type="email" name="email" />
+                            <TextField id="email" label="Outlemailined" variant="filled" type="email" name="email" />
                             <ErrorMessage name="email" component="div" />
                         </Box>
                         <Box className="BoxFormUnitaire">
-                            <TextField id="outlined-basic" label="Age" variant="filled" type="age" name="age" />
+                            <TextField id="age" label="Age" variant="filled" type="number" name="age" />
                             <ErrorMessage name="age" component="div" />
                         </Box>
                         <Box className="BoxFormUnitaire">
-                            <TextField id="outlined-basic" label="Poids" variant="filled" type="weight" name="weight" />
+                            <TextField id="weight" label="Poids" variant="filled" type="float" name="weight" />
                             <ErrorMessage name="weight" component="div" />
                         </Box>
                         <Button variant="contained" type="submit" className="ButtonForm">
