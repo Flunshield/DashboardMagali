@@ -7,14 +7,19 @@ const initialValues: AddPatientInterface = {
     firstName: "",
     lastName: "",
     email: "",
-    age: "",
-    weight: "",
+    age: undefined,
+    weight: undefined,
     patientNumber: undefined
 }
 
 export default function AddPatient() {
+    var monTableau = Object.keys(initialValues).map(function (cle) {
+        return cle
+    });
+    console.log(monTableau)
     const onSubmit = (values: AddPatientInterface) => {
         // Il faudra faire le lien vers le back ici
+        console.log(values)
     }
 
     const validate = (values: AddPatientInterface) => {
@@ -45,30 +50,12 @@ export default function AddPatient() {
                     onSubmit={onSubmit}
                 >
                     <Form className="Form">
-                        <Box className="BoxFormUnitaire">
-                            <Field as={TextField} id="firstName" label="Prénom" variant="filled" type="text" name="firstName" />
-                            <ErrorMessage name="firstName" component="div" />
-                        </Box>
-                        <Box className="BoxFormUnitaire">
-                            <Field as={TextField} id="lastName" label="Nom" variant="filled" type="text" name="lastName" />
-                            <ErrorMessage name="lastName" component="div" />
-                        </Box>
-                        <Box className="BoxFormUnitaire">
-                            <Field as={TextField} id="email" label="Mail" variant="filled" type="email" name="email" />
-                            <ErrorMessage name="email" component="div" />
-                        </Box>
-                        <Box className="BoxFormUnitaire">
-                            <Field as={TextField} id="age" label="Age" variant="filled" type="number" name="age" />
-                            <ErrorMessage name="age" component="div" />
-                        </Box>
-                        <Box className="BoxFormUnitaire">
-                            <Field as={TextField} id="weight" label="Poids" variant="filled" type="float" name="weight" />
-                            <ErrorMessage name="weight" component="div" />
-                        </Box>
-                        <Box className="BoxFormUnitaire">
-                            <Field as={TextField} id="numberPatient" label="Numéro du patient" variant="filled" type="number" name="numberPatient" />
-                            <ErrorMessage name="numberPatient" component="div" />
-                        </Box>
+                        {monTableau.map((cle) =>
+                            <Box className="BoxFormUnitaire">
+                                <Field as={TextField} id={cle} label={cle} variant="filled" type="text" name={cle} />
+                                <ErrorMessage name={cle} component="div" />
+                            </Box>
+                        )}
                         <Button variant="contained" type="submit" className="ButtonForm">
                             <b>Envoyer</b>
                         </Button>
