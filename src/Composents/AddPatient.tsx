@@ -2,6 +2,7 @@ import { Formik, Form, ErrorMessage, Field } from "formik";
 import { Box, Button, Card, TextField } from "@mui/material";
 import '../Css/AddPatient.css';
 import { AddPatientInterface } from "../Interfaces/AddPatientInterface";
+import { REGISTRATION_FORM } from "../Constant/Constant";
 
 const initialValues: AddPatientInterface = {
     firstName: "",
@@ -13,10 +14,10 @@ const initialValues: AddPatientInterface = {
 }
 
 export default function AddPatient() {
-    var monTableau = Object.keys(initialValues).map(function (cle) {
+    const valuesTab = Object.keys(initialValues).map(function (cle) {
         return cle
     });
-    console.log(monTableau)
+
     const onSubmit = (values: AddPatientInterface) => {
         // Il faudra faire le lien vers le back ici
         console.log(values)
@@ -42,7 +43,7 @@ export default function AddPatient() {
 
     return (
         <Box className="BoxForm">
-            <h2 className="labelForm">Fiche d'inscription</h2>
+            <h2 className="labelForm">{REGISTRATION_FORM}</h2>
             <Card className="FormCard">
                 <Formik
                     initialValues={initialValues}
@@ -50,10 +51,10 @@ export default function AddPatient() {
                     onSubmit={onSubmit}
                 >
                     <Form className="Form">
-                        {monTableau.map((cle) =>
+                        {valuesTab.map((values) =>
                             <Box className="BoxFormUnitaire">
-                                <Field as={TextField} id={cle} label={cle} variant="filled" type="text" name={cle} />
-                                <ErrorMessage name={cle} component="div" />
+                                <Field as={TextField} id={values} label={values} variant="filled" type="text" name={values} />
+                                <ErrorMessage name={values} component="div" />
                             </Box>
                         )}
                         <Button variant="contained" type="submit" className="ButtonForm">
